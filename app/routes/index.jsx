@@ -1,0 +1,22 @@
+// import { Link } from '@remix-run/react';
+const { Link } = require('@remix-run/react');
+
+// import homeStyles from '~/styles/home.css';
+const homeStyles = require('~/styles/home.css');
+
+export const links = () => {
+  return [{ rel: 'stylesheet', href: homeStyles }];
+};
+
+export default function Index() {
+  return (
+    <main id="content">
+      <h1>A better way of keeping track of your notes</h1>
+      <p>Try our early beta and never loose track of your notes again!</p>
+      <p id="cta">
+        <Link to="/notes">Try Now!</Link>
+      </p>
+    </main>
+  );
+}
+
